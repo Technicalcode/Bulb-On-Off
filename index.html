@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .flex{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            width: 100%;
+            height: 100vh;
+            background-color:  rgb(126, 91, 206);
+        }
+        .bulbOff{
+            width: 50%;
+            height: 60vh;
+            background-color: rgb(126, 91, 206);
+            color: #fff;  
+            
+        }
+        h1{
+            margin-bottom: 4rem;
+            font-size: 2.5rem;
+            color: rgb(0, 52, 172);
+            font-family: sans-serif;
+            box-shadow: 0 0 1rem rgba(255, 255, 255, 0.1);
+        }
+        button{
+            padding: 1rem;
+            margin: 1rem;
+            outline: none;
+            border: none;
+            font-size: 2.5rem;
+            flex-wrap: wrap;
+            border-radius: 1rem;
+        }
+        button:hover{
+            background-color: black;
+            color: #fff;
+            box-shadow: 0 0 1rem rgba(255, 255, 255, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <div class="container flex">
+        <h1>Bulb ON/OFF</h1>
+        <img class="bulbOff" src="https://freepngimg.com/thumb/bulb/1-bulb-png-image-thumb.png" alt="">
+        <div class="btn">
+            <button class="bulb-on" onclick="bulbOn()">ON</button>
+            <button class="bulb-on" onclick="bulbOff()">OFF</button>
+        </div>
+    </div>
+
+    <script>
+        let bulbobj = document.querySelector(".bulbOff")
+
+        function bulbOn(){ ///bulbOn use in onclick in html function se aya
+         bulbobj.setAttribute("src","https://freepngimg.com/thumb/bulb/5-yellow-light-bulb-png-image-thumb.png")   
+        }
+        function bulbOff(){      ///bulbOff use in onclick in html function se aya
+         bulbobj.setAttribute("src","https://freepngimg.com/thumb/bulb/1-bulb-png-image-thumb.png")
+        }
+    </script>
+</body>
+</html>
